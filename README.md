@@ -53,3 +53,6 @@ gulp.task('default', gulp.series('release', 'last_version', 'build_update'));
 ```
 
 ## Установка
+```sh
+npm install gulp@4.0.0 --save
+```

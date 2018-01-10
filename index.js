@@ -1,5 +1,9 @@
 'use strict';
 
+/*
+ npm install gulp@4.0.0 gulp-load-plugins gulp-batch-replace gulp-convert-encoding gulp-file gulp-git gulp-gzip gulp-load-plugins gulp-rename gulp-tar moment os del path --save
+ */
+
 module.exports = function (conf) {
     const config = {
         name: conf.name,
