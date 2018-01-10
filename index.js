@@ -44,7 +44,7 @@ module.exports = function (conf) {
 
     let app = {
         last_version: plugins.getTask('build_last_version'),
-        release: plugins.getTask('build_item'),
+        release: plugins.getTask('build_release'),
         update: plugins.getTask('build_update')
     };
     return app;
