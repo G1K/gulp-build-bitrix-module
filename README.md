@@ -50,6 +50,8 @@ gulp.task('build_update', build.update);
 
 // Дефолтная задача. Собирает все по очереди
 gulp.task('default', gulp.series('release', 'last_version', 'build_update'));
+// 'release' и 'last_version' можно вместе не указывать, достаточно last_version, так как команда вызывает код release
+gulp.task('default', gulp.series('last_version', 'build_update'));
 ```
 
 ## Установка
