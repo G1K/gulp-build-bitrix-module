@@ -7,6 +7,7 @@
 
 ## Подмодули проекта
 - если у вашего модуля есть git подмодули, то код будет перекодирован
+
 было:
 ```php
 namespace Project\Tools\Sale;
@@ -23,6 +24,8 @@ use CCatalogDiscount,
     Bitrix\Main\Loader,
     Project\Ver7348d5c7870f19b39d83f080ca9e708bbba1c3d2\Tools\Utility\Cache;
 ```
+
+- в итоге у вас могуть быть два модуля с разными версиями подмодулей, и не будут конфликтовать друг с другом
 
 ## Пример gulpfile.js
 ```javascript
