@@ -56,12 +56,11 @@ trait Event {
         unset(self::$isStart[static::evetType()]);
         return false;
     }
-
 }
 ```
 стало
 ```php
-namespace Project\Ver5f460f6b6bac9a6ef8651c56ce2c9e84b0b39125\Tools\Trains;use Exception;trait Event{static private $jd283fr6=array();static protected function evetType(){throw new Exception('Установите тип события');}static protected function start(){if(empty(self::$jd283fr6[static::evetType()])){self::$jd283fr6[static::evetType()]=true;return true;}else{return false;}}static protected function stop(){unset(self::$jd283fr6[static::evetType()]);return false;}}[develop-jerff-ru@server jerff.b24autotask]$
+namespace Project\Ver5f460f6b6bac9a6ef8651c56ce2c9e84b0b39125\Tools\Trains;use Exception;trait Event{static private $jd283fr6=array();static protected function evetType(){throw new Exception('Установите тип события');}static protected function start(){if(empty(self::$jd283fr6[static::evetType()])){self::$jd283fr6[static::evetType()]=true;return true;}else{return false;}}static protected function stop(){unset(self::$jd283fr6[static::evetType()]);return false;}}
 ```
 
 ## Пример gulpfile.js
