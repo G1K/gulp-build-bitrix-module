@@ -1,6 +1,6 @@
 {
   "name": "gulp-build-bitrix-modul",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Сборка модуля для маркеплейса, для установки в win-1251 и utf-8",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,8 @@
     "bitrix",
     "modul",
     "build",
-    "markeplace"
+    "markeplace",
+    "obfuscator"
   ],
   "author": "Alexej Popov",
   "license": "MIT",

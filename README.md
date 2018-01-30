@@ -27,6 +27,43 @@ use CCatalogDiscount,
 
 - в итоге у вас могуть быть два модуля с разными версиями подмодулей, и не будут конфликтовать друг с другом
 
+## Офбускация кода
+- кодирует код, указанный в encode
+было:
+```php
+namespace Project\Tools\Trains;
+
+use Exception;
+
+trait Event {
+
+    static private $isStart = array();
+
+    static protected function evetType() {
+        throw new Exception('Установите тип события');
+    }
+
+    static protected function start() {
+        if (empty(self::$isStart[static::evetType()])) {
+            self::$isStart[static::evetType()] = true;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    static protected function stop() {
+        unset(self::$isStart[static::evetType()]);
+        return false;
+    }
+
+}
+```
+стало
+```php
+namespace Project\Ver5f460f6b6bac9a6ef8651c56ce2c9e84b0b39125\Tools\Trains;use Exception;trait Event{static private $jd283fr6=array();static protected function evetType(){throw new Exception('Установите тип события');}static protected function start(){if(empty(self::$jd283fr6[static::evetType()])){self::$jd283fr6[static::evetType()]=true;return true;}else{return false;}}static protected function stop(){unset(self::$jd283fr6[static::evetType()]);return false;}}[develop-jerff-ru@server jerff.b24autotask]$
+```
+
 ## Пример gulpfile.js
 ```javascript
 "use strict";
@@ -36,7 +73,11 @@ let build = require('gulp-build-bitrix-modul')({
     name: 'project.ajax',
     tools: {
         'project.tools': ['Project', 'Tools']
-    }
+    },
+    encode: [
+        'include.php',
+        'project.tools/**/*.php'
+    ]
 });
 
 // Сборка текущей версии модуля
