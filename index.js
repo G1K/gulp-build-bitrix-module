@@ -32,6 +32,8 @@ module.exports = function (conf) {
     plugins.os = require('os');
     plugins.del = require('del');
     plugins.moment = require('moment');
+    plugins.uglify = require('uglify-php');
+    plugins.es = require('event-stream')
     plugins.getTask = function (task) {
         return require('./task/' + task)(gulp, plugins, config, setting);
     };
@@ -41,6 +43,10 @@ module.exports = function (conf) {
             callback();
         };
     };
+
+    config.encode = conf.encode.map(function (file) {
+        return plugins.path.join(config.build, setting.sourse, file);
+    });
 
     let app = {
         last_version: plugins.getTask('build_last_version'),

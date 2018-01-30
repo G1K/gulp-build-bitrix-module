@@ -23,6 +23,7 @@ module.exports = function (gulp, plugins, config, setting) {
                 callback();
             },
             plugins.getTask('encode'),
+            plugins.getTask('compact'),
             plugins.getTask('archive'),
             plugins.log('build stop')
             );

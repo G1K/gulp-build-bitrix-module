@@ -13,6 +13,7 @@ module.exports = function (gulp, plugins, config, setting) {
             plugins.getTask('diff'),
             plugins.getTask('tools'),
             plugins.getTask('encode'),
+            plugins.getTask('compact'),
             plugins.getTask('archive'),
             plugins.getTask('clean'),
             plugins.log('build_update stop')

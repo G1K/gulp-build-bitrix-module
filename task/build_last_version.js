@@ -20,6 +20,7 @@ module.exports = function (gulp, plugins, config, setting) {
                 setting.sourse = setting.file;
                 callback();
             },
+            plugins.getTask('compact'),
             plugins.getTask('archive'),
             plugins.getTask('clean'),
             plugins.log('last_version stop')

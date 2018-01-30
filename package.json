@@ -21,6 +21,7 @@
   "homepage": "https://bitbucket.org/project-tm/gulp-build-bitrix-modul#readme",
   "dependencies": {
     "del": "^3.0.0",
+    "event-stream": "^3.3.4",
     "gulp": "^4.0.0",
     "gulp-batch-replace": "0.0.0",
     "gulp-convert-encoding": "^1.0.0",
@@ -32,6 +33,7 @@
     "gulp-tar": "^2.1.0",
     "moment": "^2.20.1",
     "os": "^0.1.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "uglify-php": "^1.0.7"
   }
 }
