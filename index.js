@@ -11,6 +11,7 @@ module.exports = function (conf) {
         dist: 'dist',
         test: 'test',
         tools: conf.tools,
+        encode: conf.encode,
         path: [
             './**',
             '!{node_modules,node_modules/**}',
@@ -43,10 +44,6 @@ module.exports = function (conf) {
             callback();
         };
     };
-
-    config.encode = conf.encode.map(function (file) {
-        return plugins.path.join(config.build, setting.sourse, file);
-    });
 
     let app = {
         last_version: plugins.getTask('build_last_version'),
