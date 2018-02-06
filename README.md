@@ -75,7 +75,8 @@ let build = require('gulp-build-bitrix-modul')({
     },
     encode: [
         'include.php',
-        'project.tools/**/*.php'
+        'project.tools/**/*.php',
+        '!project.tools/modules/install.php'
     ]
 });
 
