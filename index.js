@@ -30,6 +30,7 @@ module.exports = function (conf) {
     let gulp = require('gulp');
     let plugins = require('gulp-load-plugins')();
     plugins.path = require('path');
+    plugins.fs = require('fs')
     plugins.os = require('os');
     plugins.del = require('del');
     plugins.moment = require('moment');

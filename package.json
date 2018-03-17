@@ -23,6 +23,7 @@
   "dependencies": {
     "del": "^3.0.0",
     "event-stream": "^3.3.4",
+    "fs": "0.0.1-security",
     "gulp": "^4.0.0",
     "gulp-batch-replace": "0.0.0",
     "gulp-convert-encoding": "^1.0.0",

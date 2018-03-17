@@ -8,7 +8,7 @@ module.exports = function (gulp, plugins, config, setting) {
             }
             let path = [];
             output.split(plugins.os.EOL).map((file) => {
-                if (!file.match(/(dist\/)/) && file != '') {
+                if (!file.match(/(dist\/)/) && file != '' && plugins.fs.existsSync('./' + path)) {
                     if (config.tools[file]) {
                         path.push(plugins.path.join(file, '**'));
                     } else {
