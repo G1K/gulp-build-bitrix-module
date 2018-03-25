@@ -9,6 +9,7 @@ module.exports = function (conf) {
         name: conf.name,
         build: 'build',
         dist: 'dist',
+        distVersion: 'dist/version/',
         test: 'test',
         tools: conf.tools,
         encode: conf.encode,

@@ -26,7 +26,6 @@ module.exports = function (gulp, plugins, config, setting) {
                 if (match.length > 1) {
                     let date = plugins.moment(match[0].trim()).format('YYYY-MM-DD HH:mm:ss');
                     let version = match[1].replace('refs/tags/', '');
-
                     // Используем только теги формата:
                     // 1.0
                     // 1.0.0
@@ -61,6 +60,7 @@ module.exports = function (gulp, plugins, config, setting) {
             }
             setting.versions = parseVersions(output);
             setting.version = setting.versions[0].version;
+            setting.diff = setting.versions[1] ? setting.versions[1].version : setting.versions[0].version;
             setting.date = setting.versions[0].date;
             console.log('version-tags stop');
             callback();

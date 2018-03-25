@@ -2,14 +2,16 @@
 module.exports = function (gulp, plugins, config, setting) {
     return function (callback) {
         console.log('diff start');
-        plugins.git.exec({args: `diff ${setting.version} --name-only`}, (error, output) => {
+        plugins.git.exec({args: `diff ${setting.version} ${setting.diff} --name-only`}, (error, output) => {
             if (error) {
                 callback(error);
             }
             let path = [];
+            let dist = new RegExp('(' + config + '\/)');
             output.split(plugins.os.EOL).map((file) => {
-                if (!file.match(/(dist\/)/) && file != '' && plugins.fs.existsSync('./' + path)) {
-                    if (config.tools[file]) {
+                if (!file.match(dist) && file != '' && plugins.fs.existsSync('./' + file)) {
+                    let stats = plugins.fs.lstatSync('./' + file);
+                    if (stats.isDirectory()) {
                         path.push(plugins.path.join(file, '**'));
                     } else {
                         path.push(file);
