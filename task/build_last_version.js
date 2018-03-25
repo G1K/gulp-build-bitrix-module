@@ -23,6 +23,7 @@ module.exports = function (gulp, plugins, config, setting) {
             plugins.getTask('compact'),
             plugins.getTask('archive'),
             plugins.getTask('clean'),
+            plugins.getTask('build_update'),
             plugins.log('last_version stop')
             );
 };
