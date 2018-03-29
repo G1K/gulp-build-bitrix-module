@@ -5,7 +5,8 @@ module.exports = function (gulp, plugins, config, setting) {
         return gulp.src([
             plugins.path.join(config.build, setting.sourse, '**/*.md'),
             plugins.path.join(config.build, setting.sourse, '**/*.php'),
-            plugins.path.join(config.build, setting.sourse, '**/*.js')
+            plugins.path.join(config.build, setting.sourse, '**/*.js'),
+            plugins.path.join(config.build, setting.sourse, 'description.*')
         ])
                 .pipe(plugins.convertEncoding({to: 'win1251'}))
                 .pipe(gulp.dest(plugins.path.join(config.build, setting.sourse)))

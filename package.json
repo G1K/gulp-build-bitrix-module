@@ -1,6 +1,6 @@
 {
     "name": "gulp-build-bitrix-modul",
-    "version": "1.6.8",
+    "version": "1.7.0",
     "description": "Сборка модуля для маркеплейса, для установки в win-1251 и utf-8",
     "main": "index.js",
     "scripts": {
