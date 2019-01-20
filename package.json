@@ -1,14 +1,14 @@
 {
-    "name": "gulp-build-bitrix-modul",
-    "version": "1.7.3",
-    "description": "Сборка модуля для маркетплейса, для установки в win-1251 и utf-8",
+    "name": "gulp-bitrix-module-build",
+    "version": "0.1.3",
+    "description": "fork gulp-build-bitrix-modul, Сборка модуля для маркетплейса, для установки в win-1251 и utf-8",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
         "type": "git",
-        "url": "git+ssh://git@bitbucket.org/project-tm/gulp-build-bitrix-modul.git"
+        "url": "git+ssh://git@github.com:G1K/gulp-build-bitrix-module.git"
     },
     "keywords": [
         "bitrix",
@@ -19,7 +19,7 @@
     ],
     "author": "Alexej Popov",
     "license": "MIT",
-    "homepage": "https://bitbucket.org/project-tm/gulp-build-bitrix-modul#readme",
+    "homepage": "https://github.com/G1K/gulp-build-bitrix-module#readme",
     "dependencies": {
         "del": "^3.0.0",
         "event-stream": "^3.3.4",
@@ -33,6 +33,7 @@
         "gulp-load-plugins": "^1.5.0",
         "gulp-rename": "^1.2.2",
         "gulp-tar": "^2.1.0",
+        "lodash": "^4.17.11",
         "moment": "^2.20.1",
         "os": "^0.1.1",
         "path": "^0.12.7",

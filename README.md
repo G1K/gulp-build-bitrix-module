@@ -1,8 +1,6 @@
-# Сборщик модулей для Bitrix Маркетплейс
-- [код на bitbucket](https://bitbucket.org/project-tm/gulp-build-bitrix-modul.git)
-- [код на github](https://github.com/project-npm/gulp-build-bitrix-modul.git)
+fork [gulp-build-bitrix-modul](https://github.com/project-npm/gulp-build-bitrix-modul.git)
 
-## [Модуль заготовка для битрикс маркетплейс](https://bitbucket.org/project-marketplace/jerff.core)
+
 
 ## Модуль собирает сборку для маркетплейса:
 - архив .last_version 
