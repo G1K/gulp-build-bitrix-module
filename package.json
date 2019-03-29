@@ -1,6 +1,6 @@
 {
     "name": "gulp-bitrix-module-build",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "fork gulp-build-bitrix-modul, Сборка модуля для маркетплейса, для установки в win-1251 и utf-8",
     "main": "index.js",
     "scripts": {

@@ -13,6 +13,12 @@ module.exports = function (conf) {
 		distVersion: 'dist/version/',
 		test: 'test',
 		tools: conf.tools,
+		encode: _.union([
+			'**/*.md',
+			'**/*.php',
+			'**/*.js',
+			'description.*',
+		], conf.encode),
 		minify: conf.minify,
 		path: _.union([
 			'./**',
