@@ -15,7 +15,7 @@ $arModuleVersion = array(
 \t"VERSION" => "${ setting.version }",
 \t"VERSION_DATE" => "${ setting.date }"
 );
-?>`;
+`;
         return plugins.file('version.php', content, {src: true})
                 .pipe(gulp.dest('install'))
                 .on('end', function() {
