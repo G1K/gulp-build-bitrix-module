@@ -13,7 +13,7 @@ module.exports = function (conf) {
 		distVersion: 'dist/version/',
 		test: 'test',
 		tools: conf.tools,
-		encode: conf.encode,
+		minify: conf.minify,
 		path: _.union([
 			'./**',
 			'!{node_modules,node_modules/**}',

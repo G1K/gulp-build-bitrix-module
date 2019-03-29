@@ -38,7 +38,7 @@ use CCatalogDiscount,
 - в итоге у вас могуть быть два модуля с разными версиями подмодулей, и не будут конфликтовать друг с другом
 
 ## Офбускация кода
-- кодирует код, указанный в encode, было:
+- кодирует код, указанный в minify, было:
 ```php
 namespace Project\Tools\Trains;
 
@@ -82,7 +82,7 @@ let build = require('gulp-build-bitrix-modul')({
     tools: {
         'project.tools': ['Project', 'Tools']
     },
-    encode: [
+    minify: [
         'include.php',
         'project.tools/**/*.php',
         '!project.tools/modules/install.php'

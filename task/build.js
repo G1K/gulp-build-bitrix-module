@@ -17,7 +17,7 @@ module.exports = function (gulp, plugins, config, setting) {
             gulp.parallel(plugins.getTask('version-tools'), plugins.getTask('version-tags')),
             plugins.getTask('version'),
             plugins.getTask('tools'),
-            plugins.getTask('compact'),
+            plugins.getTask('minify'),
             plugins.getTask('archive'),
             function (callback) {
                 setting.file = 'cp1251';
